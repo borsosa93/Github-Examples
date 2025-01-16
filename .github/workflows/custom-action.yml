@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: borsosa93/custom-actions@0.0.3
+        uses: borsosa93/custom-actions@0.0.4
         with:
           name: 'Mona Lisa'
       # Use the output from the `hello` step
