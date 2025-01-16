@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: borsosa93/custom-actions@0.0.1
+        with:
+          name: 'Mona Lisa'
+      # Use the output from the `hello` step
+      - name: Get the output greeting
+        run: echo "The time was ${{ steps.hello.outputs.greeting }}"
